@@ -10,11 +10,21 @@ function openModal(event){
         modal.querySelector('.modal-body').textContent = info;
         modal.style.display = 'block';
 }
-modalClose.addEventListener('click',closeModal);
+
+
 function closeModal(){
       modal.style.display = 'none';
 }
 
+modalClose.addEventListener('click',closeModal);
+
 for(let i=0;i<thumbnails.length;i++){
     thumbnails[i].addEventListener('click',openModal)
 }
+
+window.addEventListener('click',function(event){
+    if(event.target === modal){
+        closeModal();
+    }
+});
+
