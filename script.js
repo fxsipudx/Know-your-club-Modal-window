@@ -28,3 +28,9 @@ window.addEventListener('click',function(event){
     }
 });
 
+window.addEventListener('keydown',function(event){
+    if(event.key === 'Escape'){
+        closeModal();
+    }
+})
+
